@@ -6,17 +6,29 @@ My Personal Gitea Service on RaspberryPi3
 ## Install
 
 ```bash
-cd /home/pi/github
+cd /mnt/HDD1
 git clone https://github.com/dymaxionkim/GiteaPi.git
 
-mkdir /mnt/HDD1/gitea
-ln -s /home/pi/github/GiteaPi/custom /mnt/HDD1/gitea/custom
-ln -s /home/pi/github/GiteaPi/UpdateGitea.sh /mnt/HDD1/gitea/UpdateGitea.sh
-
-sudo echo -e "\n" >> /etc/rc.local
-sudo echo "# Gitea" >> /etc/rc.local
-sudo echo "su - pi -c '/mnt/HDD1/gitea/gitea web' &" >> /etc/rc.local
+./UpdateGitea.sh
 ```
+
+## Set Auto Start
+
+```bash
+sudo nano /etc/rc.local
+```
+
+Add next :
+
+```
+# Gitea
+su - pi -c '/mnt/HDD1/GiteaPi/gitea web' &
+```
+
+## Certifications
+
+
+
 
 ## First Start
 

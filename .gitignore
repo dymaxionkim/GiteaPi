@@ -1,0 +1,10 @@
+# Ignore executable files
+gitea
+gitea.old
+
+# Ignore some sub-directories
+indexers/
+data/
+gitea-repositories/
+log/
+
