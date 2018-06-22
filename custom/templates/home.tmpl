@@ -1,0 +1,32 @@
+{{template "base/head" .}}
+<div class="home">
+
+	<div class="ui stackable middle very relaxed page grid">
+		<div class="sixteen wide center aligned centered column">
+			<div>
+				<img class="logo" src="{{AppSubUrl}}/img/gitea-lg.png" />
+			</div>
+			<div class="hero">
+				<h1 class="ui icon header title">
+					Personal Repository
+				</h1>
+				<h2>{{.i18n.Tr "app_desc"}}</h2>
+			</div>
+		</div>
+	</div>
+
+	{{if eq .Lang "ko-KR"}}
+		<h3><center>
+			<a href="http://dymaxionkim.github.io/" target="_blank">DymaxionKim.github.io</a><br>
+			<a href="http://dymaxionkim.iptime.org:3000" target="_blank">DymaxionKim.iptime.org</a>
+		</center></h3>
+	{{else}}
+		<h3><center>
+			<a href="http://dymaxionkim.github.io/" target="_blank">DymaxionKim.github.io</a><br>
+			<a href="http://dymaxionkim.iptime.org:3000" target="_blank">DymaxionKim.iptime.org</a>
+		</center></h3>
+	{{end}}
+
+</div>
+{{template "base/footer" .}}
+
