@@ -27,28 +27,32 @@ su - pi -c '/mnt/HDD1/GiteaPi/gitea web' &
 
 ## Certifications
 
-
-
-
-## First Start
-
 ```bash
-/mnt/HDD1/gitea/gitea web --port 3100 --config /mnt/HDD1/GiteaPi/custom/conf/app.ini
+./gitea generate secret SECRET_KEY
+./gitea generate secret INTERNAL_TOKEN
+./gitea generate secret LFS_JWT_SECRET
 ```
 
-* Every paths should be absolute path names.
+Memo every keys, then write up in `/mnt/HDD1/GiteaPi/custom/conf/app.ini`.
 
 
-## Auto Update
+## Create Admin
 
 ```bash
-/mnt/HDD1/gitea/UpdateGitea.sh
+./gitea admin create-user --name dymaxionkim --password ???? --email dymaxion.kim@gmail.com --admin
+```
+
+
+## Auto Update Manualy
+
+```bash
+/mnt/HDD1/GiteaPi/UpdateGitea.sh
 ```
 
 ## Customization
 
 ```bash
-cd /home/pi/GiteaPi/GiteaPi_Custom
+cd /mnt/HDD1/GiteaPi
 git pull
 ```
 
